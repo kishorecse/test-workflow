@@ -1,14 +1,14 @@
-name: Trigger Site Rebuild on a CRON Schedule
-
-on:
+name: Experiment
+on: 
   schedule:
-    # Runs "at minute 55 past every hour" (see https://crontab.guru)
-    - cron: '1 * * * *'
+  - cron: '*/1 * * * *'
+
 jobs:
-  build:
-    name: Trigger Site Rebuild
+  job1:
+    name: Debug
     runs-on: ubuntu-latest
+
     steps:
-      - name: cURL request
-        # Hit the webhook endpoint to rebuild  from the "main" branch
-        run: curl -i https://covidrescue.co.in/api/check-send-notification
+    - name: cURL request
+    # Hit the webhook endpoint to rebuild  from the "main" branch
+    run: curl -i https://covidrescue.co.in/api/check-send-notification
