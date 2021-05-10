@@ -13,6 +13,7 @@ jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
-    - run: |
-        echo "Hello ${{ github.event.inputs.name }}!"
-        echo "Hello ${{ github.event.inputs.home }}!"
+    - name: Call our API route
+      run: |
+          curl --request GET \
+          --url 'https://covidrescue.co.in/api/check-send-notification'
