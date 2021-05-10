@@ -11,4 +11,4 @@ jobs:
     steps:
     - name: cURL request
     # Hit the webhook endpoint to rebuild  from the "main" branch
-    run: curl -i https://covidrescue.co.in/api/check-send-notification
+      run: curl -i https://covidrescue.co.in/api/check-send-notification
